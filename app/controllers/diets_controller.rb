@@ -1,6 +1,8 @@
 class DietsController < ApplicationController
   before_action :set_diet, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_user!
+
   # GET /diets
   # GET /diets.json
   def index

@@ -13,6 +13,7 @@
   </thead>
 
   <tbody>
+    <h1><%= current_user.email %>'s Diets</h1>
     <% @diets.each do |diet| %>
       <tr>
         <td><%= diet.name %></td>

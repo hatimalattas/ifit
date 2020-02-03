@@ -12,6 +12,7 @@
   </thead>
 
   <tbody>
+  <h1><%= current_user.email %>'s Goals</h1>
     <% @goals.each do |goal| %>
       <tr>
         <td><%= goal.text %></td>

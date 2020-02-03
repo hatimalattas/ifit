@@ -19,6 +19,7 @@
   </thead>
 
   <tbody>
+  <h1><%= current_user.email %>'s Products</h1>
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
