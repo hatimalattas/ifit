@@ -1,4 +1,5 @@
 class DietsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :show]
   before_action :set_diet, only: [:show, :edit, :update, :destroy]
 
 
@@ -13,8 +14,6 @@ class DietsController < ApplicationController
   # GET /diets/1.json
   def show
   end
-  
-  before_action :authenticate_user!
 
   # GET /diets/new
   def new

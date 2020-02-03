@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :except => [:index, :show]
 
   # GET /workouts
   # GET /workouts.json
@@ -12,8 +12,6 @@ class WorkoutsController < ApplicationController
   # GET /workouts/1.json
   def show
   end
-
-  before_action :authenticate_user!
 
   # GET /workouts/new
   def new
